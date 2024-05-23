@@ -34,3 +34,9 @@ p.woocommerce-result-count {
 		background: white;
 	}
 }
+
+@media screen and (max-width: 750px) and (min-width: 400px) {
+	div.fancy-title {
+		margin-top: 7em;
+	}
+}
