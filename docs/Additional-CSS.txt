@@ -1,0 +1,32 @@
+ins>span.woocommerce-Price-amount.amount {
+	color: red;
+	background: white;
+}
+
+ins {
+	background: white
+}
+
+#sec1section {
+	background-image: url("wp-content/uploads/2024/05/shutterstock_734716603-ezgif.com-webp-to-jpg-converter-1.jpg");
+	background-size:contain;	
+}
+div.fancy-desc {	
+	max-height: 300px;
+	overflow: hidden
+}
+
+.section2button {
+	margin: 1em 0
+}
+
+mark.count{
+	background: white;
+	color: black;
+}
+
+@media screen and (max-width: 770px) {
+	#sec1section {
+		background: white;
+	}
+}
