@@ -25,6 +25,10 @@ mark.count{
 	color: black;
 }
 
+p.woocommerce-result-count {
+	display: none;
+}
+
 @media screen and (max-width: 770px) {
 	#sec1section {
 		background: white;
