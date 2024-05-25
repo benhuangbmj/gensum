@@ -29,6 +29,14 @@ p.woocommerce-result-count {
 	display: none;
 }
 
+.woocommerce-privacy-policy-text {
+	display: none;
+}
+
+div.wp-block-woocommerce-empty-cart-block>h2.wp-block-heading.has-text-align-center:not(.with-empty-cart-icon) {
+	display: none;
+}
+
 @media screen and (max-width: 770px) {
 	#sec1section {
 		background: white;
