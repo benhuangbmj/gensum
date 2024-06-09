@@ -1,0 +1,67 @@
+div.cols-3.widget-column-3.last-foot-col {
+	position: absolute;
+	left: calc(62vw - (100vw - 1170px) / 2 + 2em);
+}
+
+ins > span.woocommerce-Price-amount.amount {
+	color: red;
+	background: white;
+}
+
+ins {
+	background: white;
+}
+
+#sec1section {
+	background-image: url("https://gensomeginseng.com/wp-content/uploads/2024/05/shutterstock_734716603-ezgif.com-webp-to-jpg-converter-resized.jpg");
+	background-size: contain;
+}
+div.fancy-desc {
+	max-height: 300px;
+	overflow: hidden;
+}
+
+.section2button {
+	margin: 1em 0;
+}
+
+mark.count {
+	background: white;
+	color: black;
+}
+
+p.woocommerce-result-count {
+	display: none;
+}
+
+.woocommerce-privacy-policy-text {
+	display: none;
+}
+
+div.wp-block-woocommerce-empty-cart-block
+	> h2.wp-block-heading.has-text-align-center:not(.with-empty-cart-icon) {
+	display: none;
+}
+
+button.single_add_to_cart_button.button.alt {
+	background-color: black !important;
+}
+
+@media screen and (max-width: 770px) {
+	#sec1section {
+		background: white;
+	}
+}
+
+@media screen and (max-width: 750px) and (min-width: 400px) {
+	div.fancy-title {
+		margin-top: 7em;
+	}
+}
+
+@media screen and (max-width: 1170px) {
+	div.cols-3.widget-column-3.last-foot-col {
+		position: relative;
+		left: 0;
+	}
+}
