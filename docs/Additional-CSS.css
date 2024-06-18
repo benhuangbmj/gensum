@@ -47,6 +47,22 @@ button.single_add_to_cart_button.button.alt {
 	background-color: black !important;
 }
 
+div.language_redirect > a {
+	display: none;
+}
+
+div.home_section2_content ul.products {
+	display: none;
+}
+
+#sidebar {
+	display: none;
+}
+
+.site-main {
+	width: 100%;
+}
+
 @media screen and (max-width: 770px) {
 	#sec1section {
 		background: white;
