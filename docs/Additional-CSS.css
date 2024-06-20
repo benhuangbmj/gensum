@@ -13,7 +13,7 @@ ins {
 }
 
 #sec1section {
-	background-image: url("https://gensomeginseng.com/wp-content/uploads/2024/05/shutterstock_734716603-ezgif.com-webp-to-jpg-converter-resized.jpg");
+	background-image: url("https://skyrim.gensomeginseng.com/wp-content/uploads/2024/05/shutterstock_734716603-ezgif.com-webp-to-jpg-converter-resized.jpg");
 	background-size: contain;
 }
 div.fancy-desc {
@@ -61,6 +61,13 @@ div.home_section2_content ul.products {
 
 .site-main {
 	width: 100%;
+}
+
+div.woocommerce
+	> ul.products
+	> li.product-category
+	h2.woocommerce-loop-category__title {
+	display: none;
 }
 
 @media screen and (max-width: 770px) {
