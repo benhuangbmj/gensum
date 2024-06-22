@@ -13,7 +13,7 @@ ins {
 }
 
 #sec1section {
-	background-image: url("https://skyrim.gensomeginseng.com/wp-content/uploads/2024/05/shutterstock_734716603-ezgif.com-webp-to-jpg-converter-resized.jpg");
+	background-image: url("https://gensomeginseng.com/wp-content/uploads/2024/05/shutterstock_734716603-ezgif.com-webp-to-jpg-converter-resized.jpg");
 	background-size: contain;
 }
 div.fancy-desc {
@@ -66,7 +66,49 @@ div.home_section2_content ul.products {
 div.woocommerce
 	> ul.products
 	> li.product-category
-	h2.woocommerce-loop-category__title {
+	> a
+	> h2.woocommerce-loop-category__title {
+	text-align: center;
+}
+
+div.woocommerce
+	> ul.products.columns-3
+	> li.product-category
+	> a
+	> h2.woocommerce-loop-category__title {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	color: white;
+	background-color: black;
+	opacity: 0;
+	font-size: 20px !important;
+	font-weight: bold;
+	transition: 1s;
+}
+
+div.woocommerce > ul.products.columns-3 > li.product-category > a > img {
+	transition: 1s;
+	opacity: 1;
+}
+
+div.woocommerce > ul.products.columns-3 > li.product-category > a:hover > img {
+	opacity: 0.3;
+}
+
+div.woocommerce
+	> ul.products.columns-3
+	> li.product-category
+	> a:hover
+	> h2.woocommerce-loop-category__title {
+	opacity: 1;
+}
+
+div.woocommerce
+	> ul.products
+	> li.product-category
+	h2.woocommerce-loop-category__title
+	> mark {
 	display: none;
 }
 
