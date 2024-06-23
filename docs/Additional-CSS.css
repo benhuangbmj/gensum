@@ -80,9 +80,8 @@ div.woocommerce
 	width: 100%;
 	top: 50%;
 	color: white;
-	background-color: black;
 	opacity: 0;
-	font-size: 20px !important;
+	font-size: 40px !important;
 	font-weight: bold;
 	transition: 1s;
 }
@@ -93,7 +92,8 @@ div.woocommerce > ul.products.columns-3 > li.product-category > a > img {
 }
 
 div.woocommerce > ul.products.columns-3 > li.product-category > a:hover > img {
-	opacity: 0.3;
+	filter: brightness(20%);
+	opacity: 0.8;
 }
 
 div.woocommerce
@@ -112,9 +112,65 @@ div.woocommerce
 	display: none;
 }
 
+.my-columns {
+	position: relative;
+	width: 99vw;
+	left: calc((1170px - 99vw) / 2);
+}
+
+div.my-column {
+	position: relative;
+	max-width: calc(1170px / 2);
+	left: calc((99vw - 1170px) / 2);
+}
+
+div.my-column > div > div > h1,
+div.my-column > div > div > h2,
+div.my-column > div > div > div,
+div.my-column > div > div > h1,
+div.my-column > div > div > p {
+	margin: 4rem 1rem;
+	margin-left:;
+}
+
+div.my-column > div > div > p {
+	font-size: 12pt;
+	line-height: 20pt;
+}
+
+div.my-column > div > div > p > a {
+	color: blue;
+}
+
+div.my-column > div > div > div > div {
+	width: fit-content !important;
+}
+
+div.my-column > div > div > div > div > a {
+	font-weight: bold;
+}
+
+div.my-column-right {
+	position: relative;
+	left: calc((99vw - 1170px) / 2);
+	max-width: 48.1vw;
+	text-align: center;
+}
+
 @media screen and (max-width: 770px) {
 	#sec1section {
 		background: white;
+	}
+	.my-columns {
+		position: static;
+		width: auto;
+	}
+	div.my-column {
+		position: static;
+	}
+	div.my-column-right {
+		position: static;
+		max-width: 100%;
 	}
 }
 
@@ -122,11 +178,33 @@ div.woocommerce
 	div.fancy-title {
 		margin-top: 7em;
 	}
+	.my-columns {
+		position: static;
+		width: auto;
+	}
+	div.my-column {
+		position: static;
+	}
+	div.my-column-right {
+		position: static;
+		max-width: 100%;
+	}
 }
 
 @media screen and (max-width: 1170px) {
 	div.cols-3.widget-column-3.last-foot-col {
 		position: relative;
 		left: 0;
+	}
+	.my-columns {
+		position: static;
+		width: auto;
+	}
+	div.my-column {
+		position: static;
+	}
+	div.my-column-right {
+		position: static;
+		max-width: 100%;
 	}
 }
