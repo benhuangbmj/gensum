@@ -124,13 +124,30 @@ div.my-column {
 	left: calc((99vw - 1170px) / 2);
 }
 
+div.my-column::after {
+	position: absolute;
+	background-color: #8cba1c;
+	font-family: FontAwesome;
+	content: "\f105";
+	color: white;
+	border-radius: 100vw;
+	font-size: min(2vw, 25px);
+	text-align: right;
+	line-height: min(9vw, 150px);
+	width: min(9vw, 150px);
+	height: min(9vw, 150px);
+	right: max(-4.5vw, -75px);
+	top: 20%;
+	z-index: 1;
+	padding-right: min(1.5vw, 25px);
+}
+
 div.my-column > div > div > h1,
 div.my-column > div > div > h2,
 div.my-column > div > div > div,
 div.my-column > div > div > h1,
 div.my-column > div > div > p {
-	margin: 4rem 1rem;
-	margin-left:;
+	margin: 4rem 2rem;
 }
 
 div.my-column > div > div > p {
@@ -160,7 +177,7 @@ div.my-column-right {
 @media screen and (max-width: 770px) {
 	#sec1section {
 		background: white;
-	}
+	} /*
 	.my-columns {
 		position: static;
 		width: auto;
@@ -171,13 +188,13 @@ div.my-column-right {
 	div.my-column-right {
 		position: static;
 		max-width: 100%;
-	}
+	}*/
 }
 
 @media screen and (max-width: 750px) and (min-width: 400px) {
 	div.fancy-title {
 		margin-top: 7em;
-	}
+	} /*
 	.my-columns {
 		position: static;
 		width: auto;
@@ -188,7 +205,7 @@ div.my-column-right {
 	div.my-column-right {
 		position: static;
 		max-width: 100%;
-	}
+	}*/
 }
 
 @media screen and (max-width: 1170px) {
@@ -206,5 +223,25 @@ div.my-column-right {
 	div.my-column-right {
 		position: static;
 		max-width: 100%;
+	}
+	div.my-column::after {
+		display: none;
+	}
+	.sitenav {
+		position: absolute;
+		right: 20px;
+		top: 130px;
+		width: fit-content;
+	}
+	a.toggleMenu {
+		background: none;
+		color: black;
+		width: fit-content;
+		float: right;
+	}
+	a.toggleMenu::after {
+		content: " \f0c9";
+		font-family: fontAwesome;
+		color: black;
 	}
 }
