@@ -13,7 +13,7 @@ ins {
 }
 
 #sec1section {
-	background-image: url("https://gensomeginseng.com/wp-content/uploads/2024/05/shutterstock_734716603-ezgif.com-webp-to-jpg-converter-resized.jpg");
+	background-image: url("https://plugin.gensomeginseng.com/wp-content/uploads/2024/05/shutterstock_734716603-ezgif.com-webp-to-jpg-converter-resized.jpg");
 	background-size: contain;
 }
 div.fancy-desc {
@@ -78,7 +78,7 @@ div.woocommerce
 	> h2.woocommerce-loop-category__title {
 	position: absolute;
 	width: 100%;
-	top: 50%;
+	top: 40%;
 	color: white;
 	opacity: 0;
 	font-size: 40px !important;
@@ -174,6 +174,13 @@ div.my-column-right {
 	text-align: center;
 }
 
+div.woocommerce.columns-3 {
+	position: relative;
+	width: 99vw;
+	left: calc((1170px - 99vw) / 2);
+	background-color: #f0f0d7;
+}
+
 @media screen and (max-width: 770px) {
 	#sec1section {
 		background: white;
@@ -230,18 +237,39 @@ div.my-column-right {
 	.sitenav {
 		position: absolute;
 		right: 20px;
-		top: 130px;
+		top: 121px;
 		width: fit-content;
 	}
 	a.toggleMenu {
 		background: none;
-		color: black;
+		color: white;
+		background-color: #8cba1c;
 		width: fit-content;
 		float: right;
+		padding: 5px;
 	}
-	a.toggleMenu::after {
-		content: " \f0c9";
+	a.toggleMenu::before {
+		content: "\f0c9  ";
 		font-family: fontAwesome;
-		color: black;
+		color: white;
+	}
+
+	div.woocommerce.columns-3 {
+		position: static;
+		width: 100%;
+	}
+	div.woocommerce
+		> ul.products.columns-3
+		> li.product-category
+		> a
+		> h2.woocommerce-loop-category__title {
+		font-size: 25px !important;
+		top: 35%;
+	}
+}
+
+@media screen and (min-width: 770px) and (max-width: 1000px) {
+	.sitenav {
+		top: 31px;
 	}
 }
