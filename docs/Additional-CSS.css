@@ -13,7 +13,7 @@ ins {
 }
 
 #sec1section {
-	background-image: url("https://plugin.gensomeginseng.com/wp-content/uploads/2024/05/shutterstock_734716603-ezgif.com-webp-to-jpg-converter-resized.jpg");
+	background-image: url("https://products.gensomeginseng.com/wp-content/uploads/2024/05/shutterstock_734716603-ezgif.com-webp-to-jpg-converter-resized.jpg");
 	background-size: contain;
 }
 div.fancy-desc {
@@ -181,7 +181,15 @@ div.woocommerce.columns-3 {
 	background-color: #f0f0d7;
 }
 
+div.flex-viewport {
+	width: 550px !important;
+	height: 550px !important;
+}
 @media screen and (max-width: 770px) {
+	div.woocommerce-product-gallery__image.flex-active-slide {
+		width: 100vw !important;
+		height: auto !important;
+	}
 	#sec1section {
 		background: white;
 	} /*
