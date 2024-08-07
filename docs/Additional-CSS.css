@@ -1,17 +1,82 @@
+:root {
+	--theme-prime: #8cba1c;
+}
 .woocommerce-store-notice__dismiss-link {
 	display: none;
 }
-.woocommerce-store-notice {
-	background-color: #8cba1c !important;
-	color: white;
-	padding: 0.25rem !important;
-	font-size: 1rem !important;
-	position: fixed !important;
-	font-weight: bold;
+@keyframes scrolling {
+	0% {
+		transform: translateX(100vw);
+	}
+	40% {
+		transform: translate(calc((100vw - 100%) / 2));
+	}
+	60% {
+		transform: translate(calc((100vw - 100%) / 2));
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes scrolling-on-mobile {
+	from {
+		transform: translateX(100vw);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+@keyframes scrolling-to-the-left {
+	from {
+		transform: translate(calc((100vw - 100%) / 2));
+	}
+	to {
+		transform: translate(-100%);
+	}
+}
+@keyframes scrolling-to-the-center {
+	from {
+		transform: translate(100vw);
+	}
+	to {
+		transform: translate(calc((100vw - 100%) / 2));
+	}
+}
+.woocommerce-store-notice::after {
+	content: "gensomeginseng.com";
+	color: var(--theme-prime);
 	display: block;
+	position: absolute;
+	width: 300vw;
+	background: var(--theme-prime);
+	top: 0;
+	left: -100vw;
+	height: 100%;
+	z-index: -1;
+}
+.woocommerce-store-notice {
+	background-color: var(--theme-prime) !important;
+	color: white;
+	padding: 0.25rem 0 !important;
+	font-size: 1rem !important;
+	font-weight: bold;
+	display: inline-block;
+	position: fixed !important;
+	top: 0;
+	animation:
+		scrolling-to-the-center 3s linear 0s,
+		scrolling-to-the-left 20s linear 8s,
+		scrolling 50s linear 28s infinite;
+	box-shadow: none !important;
+	width: fit-content !important;
+	transform: translate(calc((100vw - 100%) / 2));
+}
+.woocommerce-store-notice:hover {
+	animation: none;
 }
 div.header > div.headerinformation {
-	padding-top: 2rem;
+	padding: 2rem 0 0.5rem 0;
 }
 
 .site-title::before {
@@ -29,7 +94,8 @@ div.header > div.headerinformation {
 h2.site-title {
 	font-size: 3.5rem;
 	margin-bottom: 1rem;
-	margin-top: -2.5rem;
+	margin-top: -2rem;
+	color: black;
 }
 
 div.cols-3.widget-column-3.last-foot-col {
@@ -221,8 +287,13 @@ div.flex-viewport {
 	height: 550px !important;
 }
 @media screen and (max-width: 770px) {
-	div.header > div.headerinformation {
-		padding-top: 3rem;
+	.woocommerce-store-notice {
+		text-wrap: nowrap;
+		animation: scrolling-on-mobile 25s linear 0s infinite;
+	}
+	.woocommerce-store-notice::after {
+		left: -max(300vw, 300%);
+		width: max(300vw, 300%);
 	}
 	h2.site-title {
 		margin-top: 0;
