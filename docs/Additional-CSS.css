@@ -11,13 +11,13 @@ html {
 	padding: 3rem;
 }
 .website-qrcode > img {
-	width: 100%;
+	width: 100%
 }
 .wechat-qrcode {
 	padding: 3rem;
 }
 .wechat-qrcode > img {
-	width: 100%;
+	width: 100%
 }
 
 .instagram-qrcode {
@@ -26,6 +26,7 @@ html {
 .welcome-message {
 	line-height: 3rem !important;
 	font-size: 1.5rem !important;
+	
 }
 .instagram-container {
 	display: flex;
@@ -37,43 +38,36 @@ html {
 	display: none;
 }
 @keyframes scrolling {
-	0% {
-		transform: translateX(100vw);
-	}
-	40% {
-		transform: translate(calc((100vw - 100%) / 2));
-	}
-	60% {
-		transform: translate(calc((100vw - 100%) / 2));
-	}
-	100% {
-		transform: translateX(-100%);
-	}
+	0% {transform: translateX(100vw);}
+	40% {transform: translate(calc((100vw - 100%)/2));}
+	60% {transform: translate(calc((100vw - 100%)/2));}
+	100% {transform: translateX(-100%);}	
 }
 
 @keyframes scrolling-on-mobile {
-	from {
-		transform: translateX(100vw);
-	}
-	to {
-		transform: translateX(-100%);
-	}
+	from {transform: translateX(100vw);}
+	to {transform: translateX(-100%);}
 }
 @keyframes scrolling-to-the-left {
-	from {
-		transform: translate(calc((100vw - 100%) / 2));
-	}
-	to {
-		transform: translate(-100%);
-	}
+	from {transform: translate(calc((100vw - 100%)/2));}
+	to {transform: translate(-100%)}
 }
 @keyframes scrolling-to-the-center {
-	from {
-		transform: translate(100vw);
-	}
-	to {
-		transform: translate(calc((100vw - 100%) / 2));
-	}
+	from {transform: translate(100vw)}
+	to {transform: translate(calc((100vw - 100%)/2));}
+}
+@keyframes scale-in {
+	from {transform: scale(0);}
+	to {transform: scale(1);}
+}
+
+@keyframes scrolling-into-screen-left {
+	from {transform: translate(-100%);}
+	to {transform: translate(0%);}
+}
+@keyframes scrolling-into-screen-right {
+	from {transform: translate(100%);}
+	to {transform: translate(0%);}
 }
 .woocommerce-store-notice::after {
 	content: "gensomeginseng.com";
@@ -85,41 +79,37 @@ html {
 	top: 0;
 	left: -100vw;
 	height: 100%;
-	z-index: -1;
+	z-index:  -1;
 }
-.woocommerce-store-notice {
+.woocommerce-store-notice{
 	background-color: var(--theme-prime) !important;
 	color: white;
-	padding: 0.25rem 0 !important;
+	padding: .25rem 0 !important;
 	font-size: 1rem !important;
 	font-weight: bold;
-	display: inline-block;
+	display: inline-block;	
 	position: fixed !important;
 	top: 0;
-	animation:
-		scrolling-to-the-center 3s linear 0s,
-		scrolling-to-the-left 20s linear 8s,
-		scrolling 50s linear 28s infinite;
+	animation:  scrolling-to-the-center 3s linear 0s, scrolling-to-the-left 20s linear 8s, scrolling 50s linear 28s infinite;
 	box-shadow: none !important;
 	width: fit-content !important;
-	transform: translate(calc((100vw - 100%) / 2));
+	transform: translate(calc((100vw - 100%)/2));
 }
-.woocommerce-store-notice:hover {
+.woocommerce-store-notice:hover{
 	animation: none;
 }
-div.header > div.headerinformation {
-	padding: 2rem 0 0.5rem 0;
+div.header>div.headerinformation{
+	padding: 2rem 0 .5rem 0;
 }
-
 .site-title::before {
 	content: "";
 	width: 1.5em;
 	height: 1.5em;
-	display: inline-block;
+	display: inline-block;	
 	background-image: url("https://gensomeginseng.com/wp-content/uploads/2024/08/Gensome-Ginseng-Logo.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-	margin-right: 0.25em;
+	margin-right: .25em;
 	position: relative;
 	top: 1.1rem;
 }
@@ -133,31 +123,32 @@ h2.site-title {
 div.cols-3.widget-column-3.last-foot-col {
 	position: absolute;
 	left: calc(62vw - (100vw - 1170px) / 2 + 2em);
+	
 }
 
-ins > span.woocommerce-Price-amount.amount {
+ins>span.woocommerce-Price-amount.amount {
 	color: red;
 	background: white;
 }
 
 ins {
-	background: white;
+	background: white
 }
 
 #sec1section {
 	background-image: url("https://gensomeginseng.com/wp-content/uploads/2024/05/shutterstock_734716603-ezgif.com-webp-to-jpg-converter-resized.jpg");
-	background-size: contain;
+	background-size:contain;	
 }
-div.fancy-desc {
+div.fancy-desc {	
 	max-height: 300px;
-	overflow: hidden;
+	overflow: hidden
 }
 
 .section2button {
-	margin: 1em 0;
+	margin: 1em 0
 }
 
-mark.count {
+mark.count{
 	background: white;
 	color: black;
 }
@@ -170,8 +161,7 @@ p.woocommerce-result-count {
 	display: none;
 }
 
-div.wp-block-woocommerce-empty-cart-block
-	> h2.wp-block-heading.has-text-align-center:not(.with-empty-cart-icon) {
+div.wp-block-woocommerce-empty-cart-block>h2.wp-block-heading.has-text-align-center:not(.with-empty-cart-icon) {
 	display: none;
 }
 
@@ -179,12 +169,12 @@ button.single_add_to_cart_button.button.alt {
 	background-color: black !important;
 }
 
-div.language_redirect > a {
+div.language_redirect>a {
 	display: none;
 }
 
 div.home_section2_content ul.products {
-	display: none;
+	display:none;
 }
 
 #sidebar {
@@ -192,66 +182,61 @@ div.home_section2_content ul.products {
 }
 
 .site-main {
-	width: 100%;
+	width: 100%
 }
 
-div.woocommerce
-	> ul.products
-	> li.product-category
-	> a
-	> h2.woocommerce-loop-category__title {
+div.woocommerce>ul.products>li.product-category>a>h2.woocommerce-loop-category__title {
 	text-align: center;
 }
 
-div.woocommerce
-	> ul.products.columns-3
-	> li.product-category
-	> a
-	> h2.woocommerce-loop-category__title {
+div.woocommerce>ul.products.columns-3>li.product-category>a>h2.woocommerce-loop-category__title {
 	position: absolute;
 	top: 40%;
 	width: 100%;
 	color: white;
 	opacity: 0;
 	font-size: 40px !important;
-	font-weight: bold;
+	font-weight:  bold;
 	transition: 1s;
 	background: var(--theme-prime);
 }
 
-div.woocommerce > ul.products.columns-3 > li.product-category > a > img {
+div.woocommerce>ul.products.columns-3>li.product-category>a>img {
 	transition: 1s;
 	opacity: 1;
 }
 
-div.woocommerce > ul.products.columns-3 > li.product-category > a:hover > img {
+div.woocommerce>ul.products.columns-3>li.product-category>a:hover>img {
 	filter: brightness(30%);
-	opacity: 0.6;
+	opacity: .6;
 }
 
-div.woocommerce
-	> ul.products.columns-3
-	> li.product-category
-	> a:hover
-	> h2.woocommerce-loop-category__title {
-	opacity: 0.7;
+div.woocommerce>ul.products.columns-3>li.product-category>a:hover>h2.woocommerce-loop-category__title {
+	opacity: .7;
 }
 
-div.woocommerce
-	> ul.products
-	> li.product-category
-	h2.woocommerce-loop-category__title
-	> mark {
+div.woocommerce>ul.products>li.product-category h2.woocommerce-loop-category__title>mark {
 	display: none;
 }
 
+.my-columns::before {
+	content: "gensomeginseng.com";
+	width: 100vw;
+	position: absolute;
+	z-index: -3;
+	height: 100% !important;
+	color: var(--theme-prime);
+	background: var(--theme-prime);
+	left: calc(50% - 50vw);
+}
 .my-columns {
 	position: relative;
+	
 }
 div.my-column::before {
 	position: absolute;
 	content: "gensomeginseng.com";
-	width: calc(50vw - 50%) !important;
+	width: calc(50vw - 50% + 105%) !important;
 	height: 100%;
 	background: var(--theme-prime) !important;
 	color: var(--theme-prime) !important;
@@ -261,14 +246,24 @@ div.my-column::before {
 }
 
 div.my-column {
-	position: relative;
+	position: relative;	
+	animation-name: scrolling-into-screen-right;	
+	animation-play-state: paused;
+	visibility: hidden;
+	z-index:1;
+}
+
+.qrcode-columns {
+	animation-name: scale-in;	
+	animation-play-state: paused;
+	visibility: hidden;
 }
 
 div.my-column::after {
 	position: absolute;
 	background-color: var(--theme-prime);
 	font-family: FontAwesome;
-	content: "\f105";
+  content: "\f105";
 	color: white;
 	border-radius: 100vw;
 	font-size: min(2vw, 25px);
@@ -282,34 +277,33 @@ div.my-column::after {
 	padding-right: min(1.5vw, 25px);
 }
 
-div.my-column > div > div > h1,
-div.my-column > div > div > h2,
-div.my-column > div > div > div,
-div.my-column > div > div > h1,
-div.my-column > div > div > p {
+div.my-column>div>div>h1, div.my-column>div>div>h2, div.my-column>div>div>div,div.my-column>div>div>h1, div.my-column>div>div>p {
 	margin: 4rem 2rem;
 }
 
-div.my-column > div > div > p {
+div.my-column>div>div>p {
 	font-size: 12pt;
-	line-height: 20pt;
+	line-height: 20pt;	
 }
 
-div.my-column > div > div > p > a {
+div.my-column>div>div>p>a {
 	color: blue;
 }
 
-div.my-column > div > div > div > div {
-	width: fit-content !important;
+div.my-column>div>div>div>div {
+	width: fit-content !important;	
 }
 
-div.my-column > div > div > div > div > a {
+div.my-column>div>div>div>div>a {
 	font-weight: bold;
 }
 
 div.my-column-right {
-	text-align: center;
+	text-align: center;	
 	padding: 5rem;
+	animation-name: scrolling-into-screen-right;	
+	animation-play-state: paused;
+	visibility: hidden;
 }
 div.my-column-right::after {
 	display: block;
@@ -319,16 +313,33 @@ div.my-column-right::after {
 	color: var(--theme-contrast);
 	width: 100vw;
 	height: 100%;
-	top: 0;
+	top:0;
 	left: calc(-50vw + 50%);
-	z-index: -2;
+	z-index: -2;	
 }
-
 div.woocommerce.columns-3 {
 	position: relative;
 	width: 100vw;
 	left: calc(50% - 50vw);
-	background-color: var(--theme-contrast);
+	background-color: var(--theme-contrast);		
+}
+ul.products.columns-3 {
+	animation-name: scale-in;	
+	animation-play-state: paused;
+	visibility: hidden;
+}
+div.wp-block-woocommerce-all-products.wc-block-all-products {
+	animation-name: scrolling-into-screen-left;	
+	animation-play-state: paused;
+	visibility: hidden;
+}
+
+.animation-active {	
+	visibility: visible !important;
+	animation-fill-mode: forwards !important;
+	animation-play-state: running !important;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
 }
 
 div.flex-viewport {
@@ -336,15 +347,19 @@ div.flex-viewport {
 	height: 550px !important;
 }
 @media screen and (max-width: 770px) {
+	.animation-active {
+		animation-name: none !important;
+		visibility: visible !important;
+	}
 	.instagram-qrcode {
-		padding: 0 0 1rem 0;
-	}
+	padding: 0 0 1rem 0;
+}
 	.website-qrcode {
-		padding: 0 0 1rem 0;
-	}
+	padding: 0 0 1rem 0;
+}
 	.wechat-qrcode {
-		padding: 0 0 1rem 0;
-	}
+	padding: 0 0 1rem 0;
+}
 	.woocommerce-store-notice {
 		text-wrap: nowrap;
 		animation: scrolling-on-mobile 25s linear 0s infinite;
@@ -354,15 +369,15 @@ div.flex-viewport {
 		width: max(300vw, 300%);
 	}
 	h2.site-title {
-		margin-top: 0;
-	}
+	margin-top: 0;
+}
 	div.woocommerce-product-gallery__image.flex-active-slide {
-		width: 100vw !important;
-		height: auto !important;
-	}
+	width: 100vw !important;
+	height: auto !important;
+}
 	#sec1section {
 		background: white;
-	} /*
+	}/*
 	.my-columns {
 		position: static;
 		width: auto;
@@ -379,7 +394,7 @@ div.flex-viewport {
 @media screen and (max-width: 750px) and (min-width: 400px) {
 	div.fancy-title {
 		margin-top: 7em;
-	} /*
+	}/*
 	.my-columns {
 		position: static;
 		width: auto;
@@ -394,6 +409,9 @@ div.flex-viewport {
 }
 
 @media screen and (max-width: 1170px) {
+	.my-columns::before {
+		display: none;
+	}
 	div.cols-3.widget-column-3.last-foot-col {
 		position: relative;
 		left: 0;
@@ -406,22 +424,22 @@ div.flex-viewport {
 	div.my-column {
 		position: static;
 	}
-	div.my-column::before {
-		display: none;
+	div.my-column::before{
+		display:none;
 	}
 	div.my-column-right {
 		position: static;
 		max-width: 100%;
 		padding: 0;
 	}
-	div.my-column-right::after {
+	div.my-column-right::after{
 		display: none;
 	}
 	div.my-column::after {
-		display: none;
+			display: none;
 	}
 	.sitenav {
-		position: absolute;
+		position: absolute;	
 		right: 20px;
 		top: 121px;
 		width: fit-content;
@@ -436,27 +454,18 @@ div.flex-viewport {
 	}
 	a.toggleMenu::before {
 		content: "\f0c9  ";
-		font-family: fontAwesome;
+		font-family: fontAwesome;	
 		color: white;
-	}
-
-	div.woocommerce.columns-3 {
-		position: relative;
-		width: 100vw;
-		left: calc(50% - 50vw);
-	}
-	div.woocommerce
-		> ul.products.columns-3
-		> li.product-category
-		> a
-		> h2.woocommerce-loop-category__title {
+	}		
+}
+	div.woocommerce>ul.products.columns-3>li.product-category>a>h2.woocommerce-loop-category__title {
 		font-size: 25px !important;
 		top: 35%;
 	}
 }
 
 @media screen and (min-width: 770px) and (max-width: 1000px) {
-	.sitenav {
+	.sitenav {		
 		top: 31px;
-	}
+	}	
 }
