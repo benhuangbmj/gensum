@@ -14,6 +14,12 @@
 			"添加地址以決定運送方式",
 		'div[id*="-state"] label': "州/省",
 		"div.slide_info>a.slide_more": "瞭解更多",
+		"h2.wc-block-components-title.wc-block-components-express-payment__title":
+			"簡易結算",
+		"#remember-me>div.woopay-save-new-user-container.wc-version-greater-than-91>h2":
+			"保存我的資料",
+		"label[for='save_user_in_woopay'] > span":
+			"將我的資料安全保存以便一鍵結算",
 	};
 	const replaceSelectors = {
 		"div.wc-block-components-validation-error > p": {
@@ -88,6 +94,7 @@
 			"div.wc-block-components-totals-shipping",
 		);
 		const shippingFields = document.querySelector("#shipping-fields");
+		const menuCart = document.querySelector("a.wpmenucart-contents");
 		const observer = new MutationObserver((record, mo) => {
 			handleTranslate(selectors, replaceSelectors);
 		});
@@ -96,6 +103,9 @@
 				subtree: true,
 				attributes: true,
 			});
+		}
+		if (menuCart) {
+			menuCart.setAttribute("href", "/cart");
 		}
 		const phone = document.querySelector("div.phone-no>p");
 		if (phone)
