@@ -438,10 +438,13 @@ div.flex-viewport {
 	div.my-column::after {
 			display: none;
 	}
+	div.navarea {
+		position: relative;
+	}
 	.sitenav {
 		position: absolute;	
-		right: 20px;
-		top: 121px;
+		right: 0;
+		top: 2rem;
 		width: fit-content;
 	}
 	a.toggleMenu {
@@ -462,10 +465,4 @@ div.flex-viewport {
 		font-size: 25px !important;
 		top: 35%;
 	}
-}
-
-@media screen and (min-width: 770px) and (max-width: 1000px) {
-	.sitenav {		
-		top: 31px;
-	}	
 }
