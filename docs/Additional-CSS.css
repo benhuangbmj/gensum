@@ -24,9 +24,10 @@ html {
 	padding: 1rem;
 }
 .welcome-message {
-	line-height: 3rem !important;
+	line-height: max(3rem, 10vh) !important;
 	font-size: 1.5rem !important;
-	
+	display: block;
+	min-height: 70vh;
 }
 .instagram-container {
 	display: flex;
@@ -90,7 +91,7 @@ html {
 	display: inline-block;	
 	position: fixed !important;
 	top: 0;
-	animation:  scrolling-to-the-center 3s linear 0s, scrolling-to-the-left 20s linear 8s, scrolling 50s linear 28s infinite;
+	animation: scrolling 50s linear 0s infinite;
 	box-shadow: none !important;
 	width: fit-content !important;
 	transform: translate(calc((100vw - 100%)/2));
@@ -98,6 +99,7 @@ html {
 .woocommerce-store-notice:hover{
 	animation: none;
 }
+
 div.header>div.headerinformation{
 	padding: 2rem 0 .5rem 0;
 }
@@ -231,7 +233,6 @@ div.woocommerce>ul.products>li.product-category h2.woocommerce-loop-category__ti
 }
 .my-columns {
 	position: relative;
-	
 }
 div.my-column::before {
 	position: absolute;
@@ -320,13 +321,17 @@ div.my-column-right::after {
 div.woocommerce.columns-3 {
 	position: relative;
 	width: 100vw;
+	height: 100vh;
 	left: calc(50% - 50vw);
-	background-color: var(--theme-contrast);		
+	background-color: var(--theme-contrast);
+	margin-bottom: 2rem;
 }
 ul.products.columns-3 {
 	animation-name: scale-in;	
 	animation-play-state: paused;
 	visibility: hidden;
+	max-width: 150vh;
+	margin: auto;
 }
 div.wp-block-woocommerce-all-products.wc-block-all-products {
 	animation-name: scrolling-into-screen-left;	
@@ -347,10 +352,6 @@ div.flex-viewport {
 	height: 550px !important;
 }
 @media screen and (max-width: 770px) {
-	.animation-active {
-		animation-name: none !important;
-		visibility: visible !important;
-	}
 	.instagram-qrcode {
 	padding: 0 0 1rem 0;
 }
@@ -409,6 +410,9 @@ div.flex-viewport {
 }
 
 @media screen and (max-width: 1170px) {
+	div.woocommerce.columns-3 {
+		height: auto;
+	}
 	.my-columns::before {
 		display: none;
 	}
