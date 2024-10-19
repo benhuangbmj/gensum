@@ -1,0 +1,35 @@
+\documentclass[letterpaper,10pt]{article}
+
+% Packages
+\usepackage{luacode}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% Document settings
+\geometry{letterpaper, margin=0in}
+\graphicspath{{./img}}
+
+\begin{document}
+\begin{luacode}
+    flyers = {"front.png", "back.png"}
+    tex.print("\\center")
+    for p = 1, 2 do 
+    tex.print(" \\vfill")
+        for i = 1, 3 do
+            tex.print("\\begin{tabular}{cc}")
+            for j = 1,2 do 
+                tex.print("\\includegraphics[height=.32\\paperheight,  width=.47\\paperwidth]{"..flyers[p].."}")
+                if j ~= 2 then
+                    tex.print("&")
+                end
+            end
+            tex.print("\\end{tabular}")            
+            if i ~= 3 then
+                tex.print("\\vfill")
+            end
+        end
+        tex.print("\\clearpage")
+    end
+\end{luacode}
+\end{document}
