@@ -80,6 +80,10 @@ Thumbs.db
 *.tar
 *.zip
 
+# ignore environmental files
+*.env
+*.env.*
+
 # -------------------------
 # BEGIN Whitelisted Files
 # -------------------------
@@ -109,4 +113,7 @@ Thumbs.db
 !wp-content/plugins/example-plugin/
 !wp-content/themes/example-theme/
 !docs/
-/vendor/
+!admin-tools/
+
+# ignore these files
+product-list.jpg

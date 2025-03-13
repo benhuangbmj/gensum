@@ -1,0 +1,91 @@
+:root {
+	--theme-prime: #8cba1c;
+	--theme-contrast: #f0f0d7;
+	--regular-price: grey;
+	--on-sale-price: red;
+	--category-size: 4em;
+	--name-size: 3em;
+	--stroke-size: 2px;
+}
+
+div {
+	margin: auto;
+}
+
+main {
+	width: 1000px;
+	margin: auto;
+}
+
+.logo {
+	width: 100%;
+}
+
+.product-image {
+	object-fit: fill;
+	width: 100%;
+}
+
+.product-card {
+	display: grid;
+	grid-template-columns: 40% 60%;
+}
+
+.product-name {
+	width: 100%;
+	text-align: center;
+	padding: 0.5em auto;
+	margin: 1em auto;
+	font-size: var(--name-size);
+	font-family: "kaiti";
+}
+
+.product-info {
+	width: 100%;
+}
+
+.product-category {
+	margin: 1em 0;
+	padding: 0.25em 0.25em;
+	color: white;
+	font-weight: bold;
+	font-size: var(--category-size);
+	font-family: FangSong;
+}
+
+.product-price-range {
+	text-align: center;
+	display: block;
+	color: white;
+	font-size: var(--name-size);
+	-webkit-text-stroke: var(--stroke-size) var(--regular-price);
+	text-shadow: 1.5px 1.5px var(--regular-price), 1px 1px var(--regular-price),
+		0.5px 0.5px var(--regular-price), 1.25px 1.25px var(--regular-price);
+	margin: -0.5em auto;
+}
+
+.on-sale-price {
+	text-align: center;
+	display: block;
+	color: white;
+	font-size: var(--name-size);
+	-webkit-text-stroke: var(--stroke-size) var(--on-sale-price);
+	text-shadow: 1.5px 1.5px var(--on-sale-price), 1px 1px var(--on-sale-price),
+		0.5px 0.5px var(--on-sale-price), 1.25px 1.25px var(--on-sale-price);
+}
+
+.border-red {
+	border: 1px solid red;
+}
+
+.on-sale-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40%;
+	transform: rotate(20deg);
+}
+
+.product-image-container {
+	position: relative;
+}
